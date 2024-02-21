@@ -1,0 +1,20 @@
+.card {
+  --rounded: 0.5rem;
+
+  max-width: 50rem;
+  background: white;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  box-shadow: 6px 6px 24px 0 var(--clr-GrayishBlue);
+  border-radius: var(--rounded);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin: 2rem auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}

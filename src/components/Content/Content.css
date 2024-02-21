@@ -1,0 +1,142 @@
+.content {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
+  color: var(--clr-DesaturatedDarkBlue);
+  position: relative;
+}
+
+.title {
+  color: var(--clr-VeryDarkGrayishBlue);
+  font-weight: var(--fw-bold);
+}
+
+.desc {
+  font-weight: var(--fw-medium);
+}
+
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 3rem;
+  aspect-ratio: 1;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: var(--clr-VeryDarkGrayishBlue);
+  font-weight: var(--fw-bold);
+}
+
+.info span {
+  display: block;
+  font-weight: var(--fw-medium);
+  color: var(--clr-DesaturatedDarkBlue);
+}
+
+.share-icon > :first-child {
+  background: var(--clr-LightGrayishBlue);
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.share-icon div svg {
+  fill: var(--clr-VeryDarkGrayishBlue);
+}
+
+.selected > :first-child {
+  background: var(--clr-VeryDarkGrayishBlue);
+}
+
+.selected div svg {
+  fill: var(--clr-LightGrayishBlue);
+}
+
+.share-items {
+  min-width: 0;
+  background: var(--clr-VeryDarkGrayishBlue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.4rem;
+  padding: 1rem 2rem;
+  z-index: 2;
+  position: absolute;
+  bottom: 5.5rem;
+  right: -4rem;
+}
+
+.share-items p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  padding-inline: 1rem;
+}
+
+.share-items img {
+  cursor: pointer;
+}
+
+.share-items::before {
+  content: "";
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 0.8rem;
+  border-color: var(--clr-VeryDarkGrayishBlue) transparent transparent
+    transparent;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 1rem 2rem 0.5rem;
+    grid-template-rows: repeat(3, auto);
+    overflow: hidden;
+    border-radius: 0 0 var(--rounded) var(--rounded);
+  }
+
+  .user {
+    position: relative;
+  }
+
+  .share-icon {
+    z-index: 0;
+  }
+
+  .selected > :first-child {
+    background: var(--clr-DesaturatedDarkBlue);
+  }
+
+  .share-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: calc(100% + 4rem);
+    height: calc(3.5rem + 4px);
+    border-radius: 0;
+    top: -4px;
+    left: -2rem;
+    z-index: -1;
+  }
+}

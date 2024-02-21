@@ -1,0 +1,8 @@
+.app {
+  min-height: 100svh;
+  font-size: var(--fs-default);
+  font-family: var(--ff-default);
+  display: grid;
+  place-content: center;
+  background: var(--clr-LightGrayishBlue);
+}
